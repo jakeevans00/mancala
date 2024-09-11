@@ -13,7 +13,7 @@
   let hideTooltipTimeout;
 
   const cupStyles =
-    "bg-white flex items-center justify-center rounded-full w-[50px] md:w-[75px] lg:w-[100px] hover:bg-yellow-400 transition-width transition-slowest ease";
+    "bg-white flex items-center justify-center rounded-full w-[30px] md:w-[75px] lg:w-[100px] hover:bg-yellow-400 transition-width transition-slowest ease";
   const collectorStyles = `bg-black w-full h-[200px] md:h-[300px] lg:h-[370px] ${team === "top" ? "rounded-tl-full rounded-bl-full" : " rounded-tr-full rounded-br-full"} flex items-center justify-center hover:bg-teal-400 transition-height transition-slowest ease`;
 
   function show() {
@@ -42,7 +42,7 @@
   tabindex="0"
 >
   {#if showTooltip}
-    <div class="text-black">
+    <div class="text-black text-md md:text-lg">
       {count}
     </div>
   {:else}

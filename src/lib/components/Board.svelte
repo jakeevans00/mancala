@@ -74,7 +74,9 @@
   }
 </script>
 
-<div class="grid grid-cols-[1fr_6fr_1fr] bg-[rgb(186,86,36)] p-6 rounded-xl">
+<div
+  class="grid grid-cols-[1fr_6fr_1fr] bg-[rgb(186,86,36)] p-3 md:p-6 rounded-xl"
+>
   <Cup
     bind:count={topCollector.count}
     team={topCollector.team}
@@ -83,7 +85,7 @@
     {updateTrigger}
     onClick={updateBoard}
   />
-  <div class="grid grid-cols-6 grid-rows-2 gap-4 px-4">
+  <div class="grid grid-cols-6 grid-rows-2 gap-2 md:gap-4 px-2 md:px-4">
     {#each cups as cup (cup.id)}
       <Cup
         bind:count={cup.count}

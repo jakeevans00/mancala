@@ -2,7 +2,6 @@
   import Ball from "./Ball.svelte";
   export let count;
   export const key = undefined;
-  export let size = "17px";
 
   $: balls = Array(count).fill(0);
 
@@ -10,7 +9,7 @@
   const angleIncrement = Math.PI / 3; // Angle step (45 degrees)
 
   function getPosition(index) {
-    const shrinkingFactor = 1 / (index * 0.35 + 1);
+    const shrinkingFactor = 1 / (index * 0.35 + 2);
     const radius = baseSpacing * shrinkingFactor * index;
     const angle = index * angleIncrement;
 
@@ -26,7 +25,7 @@
       class="absolute"
       style={`top: 41%; left: 41%; transform: translate(${getPosition(i).x}px, ${getPosition(i).y}px)`}
     >
-      <Ball {size} />
+      <Ball />
     </div>
   {/each}
 </div>
